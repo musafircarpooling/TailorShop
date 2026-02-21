@@ -1,0 +1,7 @@
+{
+  "name": "Zardozi Royale - Premium Boutique & Tailoring",
+  "description": "A high-end Pakistani fashion boutique app offering bespoke tailoring services, luxury fabrics, and couture collections with a royal purple and gold aesthetic.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

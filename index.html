@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zardozi Royale | Luxury Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-royal: #4B0082;
+            --color-orange: #FF6A00;
+            --color-gold: #D4AF37;
+            --font-main: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: var(--font-main);
+            background: linear-gradient(135deg, #FFF8E7 0%, #FAF3E0 100%);
+            color: #111111;
+            min-height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            z-index: 0;
+        }
+        h1, h2, h3, h4, h5, h6, .luxury-heading {
+            font-family: var(--font-main), 'Playfair Display', serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FAF3E0;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: var(--color-royal);
+            border-radius: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .page-transition-enter {
+            opacity: 0;
+            transform: scale(0.98);
+        }
+        .page-transition-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 400ms, transform 400ms;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: 'var(--color-royal)',
+                        luxuryOrange: 'var(--color-orange)',
+                        elegantGold: 'var(--color-gold)',
+                        matteBlack: '#111111',
+                        creamLight: '#FFF8E7',
+                        creamDark: '#FAF3E0',
+                    },
+                    spacing: {
+                        '8': '8px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px rgba(0,0,0,0.05)',
+                        'gold': '0 0 20px rgba(212, 175, 55, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.575.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
